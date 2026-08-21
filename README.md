@@ -30,7 +30,7 @@ type ApiError = {
 
 const qk = {
   list: (f: Filters) => ["restaurants", f] as const,
-  avail: (id: string, f: Omit<Filters, "instantOnly" | "vibe">) => ["availability", id, f] as const,
+  avail: (id: string, f: Filters) => ["availability", id, f] as const,
   booking: (id: string) => ["bookings", id] as const,
 };
 ```
